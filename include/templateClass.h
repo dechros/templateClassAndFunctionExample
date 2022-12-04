@@ -8,32 +8,40 @@
  * @copyright Copyright (c) 2022
  */
 
-#include <iostream>
-
 /**
- * @brief An example class for demonstration
+ * @brief An example template class for demonstration
+ *
+ * @tparam T Template variable
  */
+template <typename T>
 class templateClass
 {
 private:
+    T templateVar;
+
 public:
     /**
-     * @brief Create the template Class object
+     * @brief Create the template class object
      */
     templateClass();
 
     /**
-     * @brief Destroy the template Class object
+     * @brief Create the template class object
+     * 
+     * @param exampleVal Template type variable
+     */
+    templateClass(T exampleVal);
+
+    /**
+     * @brief Destroy the template class object
      */
     ~templateClass();
 
     /**
-     * @brief Example function that uses a template as parameter
+     * @brief Example function that uses a template as parameter and returns it
      *
-     * @tparam T Example template
-     * @param exampleVal Template variable
+     * @param exampleVal Template type variable
      * @return T Paramater returns
      */
-    template <typename T>
-    T templateFunction(T exampleVal);
+    T normalFunction(T exampleVal);
 };
